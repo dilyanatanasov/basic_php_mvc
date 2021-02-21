@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Work Sans", sans-serif;
   font-size: 3vh;
+  text-decoration: none;
 }
 
 html {
@@ -29,9 +30,19 @@ html body .container {
   -moz-box-shadow: 17px 23px 10px -21px #011816;
   box-shadow: 17px 23px 10px -21px #011816;
 }
-html body .container .logo {
+html body .container .logo h1 {
   width: 60%;
   margin-bottom: 10px;
+  color: #f4c239;
+  text-shadow: 5px 5px 5px #011816;
+  font-size: 20vh;
+  text-align: center;
+  transform: rotate(-15deg);
+  transition-duration: 500ms;
+}
+html body .container .logo h1:hover {
+  transform: rotate(0deg);
+  transition-duration: 500ms;
 }
 html body .container input {
   width: 95%;
@@ -52,7 +63,7 @@ html body .container input[type=submit] {
 }
 html body .container input[type=submit]:hover {
   cursor: pointer;
-  background-color: #FF6F29;
+  background-color: #f4c239;
   transition: background-color 500ms ease-out;
 }
 

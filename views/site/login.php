@@ -9,7 +9,7 @@
 </head>
 <body>
     <form class="container" action="/mvc/index.php" method="post">
-        <img class="logo" src="/mvc/views/img/new_logo.png">
+        <a class="logo" href="#"><h1>ikt</h1></a>
         <input name="username" placeholder="username">
         <input name="password" placeholder="password">
         <input type="submit" value="Login"/>
