@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  font-size: 3vh;
+}
+
+html {
+  height: 100%;
+}
+html body {
+  min-height: 100%;
+  background-color: #55efc4;
+  background-image: linear-gradient(315deg, #144e48 15%, #07322e 35%, #011816 64%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+html body .container {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 5px;
+  padding: 1vh 1.5vh;
+  -webkit-box-shadow: 17px 23px 10px -21px #011816;
+  -moz-box-shadow: 17px 23px 10px -21px #011816;
+  box-shadow: 17px 23px 10px -21px #011816;
+}
+html body .container .logo {
+  width: 60%;
+  margin-bottom: 10px;
+}
+html body .container input {
+  width: 95%;
+  margin: 1vh 0;
+  border: 0.2vh solid #1fa580;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1vh;
+}
+html body .container input[type=submit] {
+  color: #011816;
+  width: 100%;
+  border: 0;
+  margin: 1vh 0;
+  border-radius: 5px;
+  background-color: #55efc4;
+  padding: 1.2vh;
+}
+html body .container input[type=submit]:hover {
+  cursor: pointer;
+  background-color: #FF6F29;
+  transition: background-color 500ms ease-out;
+}
+
+/*# sourceMappingURL=style.css.map */
