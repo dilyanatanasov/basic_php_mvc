@@ -36,6 +36,15 @@ html {
       -webkit-box-shadow: 17px 23px 10px -21px $primary-dark;
       -moz-box-shadow: 17px 23px 10px -21px $primary-dark;
       box-shadow: 17px 23px 10px -21px $primary-dark;
+      transition: width 500ms ease;
+
+      $small: 300px;
+      $medium: 900px;
+
+      @media screen and (max-width: $small) {
+        width: 60%;
+        transition: width 500ms ease;
+      }
 
       .logo h1 {
         width: 60%;
@@ -46,6 +55,11 @@ html {
         text-align: center;
         transform: rotate(-15deg);
         transition-duration: 500ms;
+
+        @media screen and (max-width: $small) {
+          font-size: 30vh;
+          transition: font-size 500ms ease;
+        }
 
         &:hover {
           transform: rotate(0deg);
@@ -60,6 +74,7 @@ html {
         border-radius: 5px;
         text-align: center;
         padding: 1vh;
+        outline: none;
       }
 
       input[type=submit] {
@@ -70,6 +85,8 @@ html {
         border-radius: 5px;
         background-color: $primary-color;
         padding: 1.2vh;
+        outline: none;
+        transition: background-color 500ms ease-out;
 
         &:hover {
           cursor: pointer;

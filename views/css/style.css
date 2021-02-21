@@ -29,6 +29,13 @@ html body .container {
   -webkit-box-shadow: 17px 23px 10px -21px #011816;
   -moz-box-shadow: 17px 23px 10px -21px #011816;
   box-shadow: 17px 23px 10px -21px #011816;
+  transition: width 500ms ease;
+}
+@media screen and (max-width: 300px) {
+  html body .container {
+    width: 60%;
+    transition: width 500ms ease;
+  }
 }
 html body .container .logo h1 {
   width: 60%;
@@ -39,6 +46,12 @@ html body .container .logo h1 {
   text-align: center;
   transform: rotate(-15deg);
   transition-duration: 500ms;
+}
+@media screen and (max-width: 300px) {
+  html body .container .logo h1 {
+    font-size: 30vh;
+    transition: font-size 500ms ease;
+  }
 }
 html body .container .logo h1:hover {
   transform: rotate(0deg);
@@ -51,6 +64,7 @@ html body .container input {
   border-radius: 5px;
   text-align: center;
   padding: 1vh;
+  outline: none;
 }
 html body .container input[type=submit] {
   color: #011816;
@@ -60,6 +74,8 @@ html body .container input[type=submit] {
   border-radius: 5px;
   background-color: #55efc4;
   padding: 1.2vh;
+  outline: none;
+  transition: background-color 500ms ease-out;
 }
 html body .container input[type=submit]:hover {
   cursor: pointer;

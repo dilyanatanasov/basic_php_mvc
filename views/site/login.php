@@ -10,8 +10,8 @@
 <body>
     <form class="container" action="/mvc/index.php" method="post">
         <a class="logo" href="#"><h1>ikt</h1></a>
-        <input name="username" placeholder="username">
-        <input name="password" placeholder="password">
+        <input name="username" placeholder="username" autocomplete="off">
+        <input type="password" name="password" placeholder="password" autocomplete="off">
         <input type="submit" value="Login"/>
     </form>
 </body>
