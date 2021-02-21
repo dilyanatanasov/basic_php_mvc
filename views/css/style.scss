@@ -38,6 +38,10 @@ html {
       box-shadow: 17px 23px 10px -21px $primary-dark;
       transition: width 500ms ease;
 
+      &:hover {
+        cursor: pointer;
+      }
+
       $small: 300px;
       $medium: 900px;
 
@@ -46,24 +50,41 @@ html {
         transition: width 500ms ease;
       }
 
-      .logo h1 {
+      .logo {
         width: 60%;
         margin-bottom: 10px;
         color: $accent-color;
-        text-shadow: 5px 5px 5px $primary-dark;
-        font-size: 20vh;
-        text-align: center;
-        transform: rotate(-15deg);
-        transition-duration: 500ms;
+
+        h1 {
+          color: $accent-color;
+          text-shadow: 5px 5px 5px $primary-dark;
+          font-size: 20vh;
+          text-align: center;
+          transform: rotate(-15deg);
+          transition-duration: 500ms;
+
+          &:hover {
+            transform: rotate(0deg);
+            transition-duration: 500ms;
+          }
+
+          @media screen and (max-width: $small) {
+            font-size: 25vh;
+            transform: rotate(0deg);
+            transition: font-size 500ms ease;
+          }
+        }
+
+        h6 {
+          font-size: 3vh;
+          text-align: center;
+          text-shadow: 5px 5px 5px $primary-dark;
+          transition-duration: 500ms;
+        }
 
         @media screen and (max-width: $small) {
           font-size: 30vh;
           transition: font-size 500ms ease;
-        }
-
-        &:hover {
-          transform: rotate(0deg);
-          transition-duration: 500ms;
         }
       }
 
@@ -75,6 +96,13 @@ html {
         text-align: center;
         padding: 1vh;
         outline: none;
+        opacity: 1;
+        transition: opacity 400ms ease;
+
+        &:focus::-webkit-input-placeholder  {
+          opacity: 0;
+          transition: opacity 400ms ease;
+        }
       }
 
       input[type=submit] {
@@ -82,9 +110,10 @@ html {
         width: 100%;
         border: 0;
         margin: 1vh 0;
+        padding: 1.2vh;
         border-radius: 5px;
         background-color: $primary-color;
-        padding: 1.2vh;
+        font-weight: bold;
         outline: none;
         transition: background-color 500ms ease-out;
 

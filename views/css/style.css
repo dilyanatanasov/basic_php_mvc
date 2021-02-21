@@ -31,15 +31,21 @@ html body .container {
   box-shadow: 17px 23px 10px -21px #011816;
   transition: width 500ms ease;
 }
+html body .container:hover {
+  cursor: pointer;
+}
 @media screen and (max-width: 300px) {
   html body .container {
     width: 60%;
     transition: width 500ms ease;
   }
 }
-html body .container .logo h1 {
+html body .container .logo {
   width: 60%;
   margin-bottom: 10px;
+  color: #f4c239;
+}
+html body .container .logo h1 {
   color: #f4c239;
   text-shadow: 5px 5px 5px #011816;
   font-size: 20vh;
@@ -47,15 +53,28 @@ html body .container .logo h1 {
   transform: rotate(-15deg);
   transition-duration: 500ms;
 }
-@media screen and (max-width: 300px) {
-  html body .container .logo h1 {
-    font-size: 30vh;
-    transition: font-size 500ms ease;
-  }
-}
 html body .container .logo h1:hover {
   transform: rotate(0deg);
   transition-duration: 500ms;
+}
+@media screen and (max-width: 300px) {
+  html body .container .logo h1 {
+    font-size: 25vh;
+    transform: rotate(0deg);
+    transition: font-size 500ms ease;
+  }
+}
+html body .container .logo h6 {
+  font-size: 3vh;
+  text-align: center;
+  text-shadow: 5px 5px 5px #011816;
+  transition-duration: 500ms;
+}
+@media screen and (max-width: 300px) {
+  html body .container .logo {
+    font-size: 30vh;
+    transition: font-size 500ms ease;
+  }
 }
 html body .container input {
   width: 95%;
@@ -65,15 +84,22 @@ html body .container input {
   text-align: center;
   padding: 1vh;
   outline: none;
+  opacity: 1;
+  transition: opacity 400ms ease;
+}
+html body .container input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 400ms ease;
 }
 html body .container input[type=submit] {
   color: #011816;
   width: 100%;
   border: 0;
   margin: 1vh 0;
+  padding: 1.2vh;
   border-radius: 5px;
   background-color: #55efc4;
-  padding: 1.2vh;
+  font-weight: bold;
   outline: none;
   transition: background-color 500ms ease-out;
 }
