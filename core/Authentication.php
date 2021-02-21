@@ -1,8 +1,8 @@
 <?php
 
-class UserLogin
+class Authentication
 {
-    public static function Authenticate(): bool {
+    public static function login(): bool {
         if (!empty($_POST)) {
             if (!empty($_POST["username"]) && !empty($_POST["password"])) {
                 if ($_POST["username"] === "dilyan" && $_POST["password"] === "1234") {

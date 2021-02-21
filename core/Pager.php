@@ -26,15 +26,14 @@ class Pager
                         $data = $controller->$name();
                         break;
                     default:
-                        // TODO
                         break;
                 }
             }
         }
-        return require_once "views/" . $page . ".php";
+        return require_once VIEW_PATH . $page . ".php";
     }
 
     public static function loadDefault($page = "login") {
-        return require_once "views/" . $page . ".php";
+        return require_once VIEW_PATH . $page . ".php";
     }
 }
