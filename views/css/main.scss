@@ -25,7 +25,7 @@ html {
     flex-direction: row;
 
     main {
-      width: 80%;
+      width: 85%;
 
       header {
         width: 100%;
@@ -52,7 +52,7 @@ html {
       text-decoration: none;
       align-content: center;
       justify-content: center;
-      width: 10%;
+      width: 13%;
       font-size: 0.5vh;
       background-color: #144e48;
       align-items: stretch;
@@ -103,10 +103,11 @@ html {
                 width: 100%;
                 height: 100%;
                 background-color: #144e48;
-                border: 0px;
+                border: 0;
                 color: white;
                 padding: 1vh 0;
                 transition: background-color 500ms ease;
+                outline: none;
 
                 &:hover {
                   background-color: $accent-color;

@@ -18,7 +18,7 @@ html body {
   flex-direction: row;
 }
 html body main {
-  width: 80%;
+  width: 85%;
 }
 html body main header {
   width: 100%;
@@ -37,7 +37,7 @@ html body nav {
   text-decoration: none;
   align-content: center;
   justify-content: center;
-  width: 10%;
+  width: 13%;
   font-size: 0.5vh;
   background-color: #144e48;
   align-items: stretch;
@@ -83,10 +83,11 @@ html body nav ul li:last-child form input {
   width: 100%;
   height: 100%;
   background-color: #144e48;
-  border: 0px;
+  border: 0;
   color: white;
   padding: 1vh 0;
   transition: background-color 500ms ease;
+  outline: none;
 }
 html body nav ul li:last-child form input:hover {
   background-color: #f4c239;
