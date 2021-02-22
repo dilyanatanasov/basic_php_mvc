@@ -25,7 +25,7 @@ html body .container {
   flex-direction: column;
   justify-content: space-around;
   border-radius: 5px;
-  padding: 1vh 1.5vh;
+  padding: 2vh 1.5vh;
   -webkit-box-shadow: 17px 23px 10px -21px #011816;
   -moz-box-shadow: 17px 23px 10px -21px #011816;
   box-shadow: 17px 23px 10px -21px #011816;
@@ -77,11 +77,12 @@ html body .container .logo h6 {
   }
 }
 html body .container input {
-  width: 95%;
+  width: 90%;
   margin: 1vh 0;
   border: 0.2vh solid #1fa580;
   border-radius: 5px;
   text-align: center;
+  font-size: 2.5vh;
   padding: 1vh;
   outline: none;
   opacity: 1;
@@ -93,7 +94,7 @@ html body .container input:focus::-webkit-input-placeholder {
 }
 html body .container input[type=submit] {
   color: #011816;
-  width: 100%;
+  width: 95%;
   border: 0;
   margin: 1vh 0;
   padding: 1.2vh;
