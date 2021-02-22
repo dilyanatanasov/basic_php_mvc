@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+	<title>Welcome</title>
     <meta charset="UTF-8">
-    <title>Welcome</title>
+	<link rel="stylesheet" type="text/css" href="/mvc/views/css/main.css">
 </head>
 <body>
-    <h1>Welcome</h1>
-    <form action="/mvc/index.php" method="post">
-        <button type="submit" name="logout" value="logout">Logout</button>
-    </form>
+	<nav>
+		<ul>
+			<ul>
+			    <li>Home</li>
+			    <li>About</li>
+			    <li>
+			    	<form action="/mvc/index.php" method="post">
+			    		<input name="logout" type="submit" value="Logout">
+			    	</form>
+				</li>
+			  </ul>
+		</ul>
+	</nav>
+	<main>
+		<header>
+			<p>Welcome</p>
+		</header>
+	</main>
+	
 </body>
 </html>
