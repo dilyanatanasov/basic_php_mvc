@@ -9,6 +9,9 @@
 	<nav>
 		<ul>
 			<ul>
+                <section class="logo">
+                    <h1>ikt</h1>
+                </section>
 			    <li>Home</li>
 			    <li>About</li>
 			    <li>

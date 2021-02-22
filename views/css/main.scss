@@ -1,0 +1,124 @@
+$primary-color: #55efc4;
+$primary-dark: #011816;
+$secondary-dark: #07322e;
+$secondary-dark2: #144e48;
+$secondary-color: #1fa580;
+$accent-color: #f4c239;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  font-size: 3vh;
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+
+  body {
+    color: white;
+    min-height: 100%;
+    background-color: #55efc4;
+    background-image: linear-gradient(315deg, #144e48 15%, #07322e 35%, #011816 64%);
+    display: flex;
+    flex-direction: row;
+
+    main {
+      width: 80%;
+
+      header {
+        width: 100%;
+
+        p {
+          text-align: center;
+          margin-top: 1vh;
+          font-size: 5vh;
+        }
+      }
+
+      footer {
+        ul {
+          li {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      align-content: center;
+      justify-content: center;
+      width: 10%;
+      font-size: 0.5vh;
+      background-color: #144e48;
+      align-items: stretch;
+      text-align: center;
+
+      ul {
+        list-style: none;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        .logo {
+          width: 100%;
+          color: $accent-color;
+
+          h1 {
+            cursor: pointer;
+            color: $accent-color;
+            font-size: 10vh;
+            text-shadow: 2px 2px 5px $primary-dark;
+            text-align: center;
+
+            &:hover {
+              transform: rotate(0deg);
+              transition-duration: 500ms;
+            }
+          }
+        }
+
+        li {
+          padding: 1vh 0;
+          font-size: 2.5vh;
+          cursor: pointer;
+          transition: background-color 500ms ease;
+
+          &:hover {
+            background-color: #07322e;
+            transition: background-color 500ms ease;
+          }
+
+          &:last-child {
+            margin-top: auto;
+            padding: 0;
+
+            form {
+              input {
+                width: 100%;
+                height: 100%;
+                background-color: #144e48;
+                border: 0px;
+                color: white;
+                padding: 1vh 0;
+                transition: background-color 500ms ease;
+
+                &:hover {
+                  background-color: $accent-color;
+                  color: $primary-dark;
+                  transition: background-color 500ms ease;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

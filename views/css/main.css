@@ -10,78 +10,89 @@ html {
   height: 100%;
 }
 html body {
-	color: white;
+  color: white;
   min-height: 100%;
   background-color: #55efc4;
   background-image: linear-gradient(315deg, #144e48 15%, #07322e 35%, #011816 64%);
   display: flex;
   flex-direction: row;
 }
-
-header {
-	width: 100%;
+html body main {
+  width: 80%;
+}
+html body main header {
+  width: 100%;
+}
+html body main header p {
+  text-align: center;
+  margin-top: 1vh;
+  font-size: 5vh;
+}
+html body main footer ul li {
+  text-decoration: none;
+}
+html body nav {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  align-content: center;
+  justify-content: center;
+  width: 10%;
+  font-size: 0.5vh;
+  background-color: #144e48;
+  align-items: stretch;
+  text-align: center;
+}
+html body nav ul {
+  list-style: none;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+html body nav ul .logo {
+  width: 100%;
+  color: #f4c239;
+}
+html body nav ul .logo h1 {
+  cursor: pointer;
+  color: #f4c239;
+  font-size: 10vh;
+  text-shadow: 2px 2px 5px #011816;
+  text-align: center;
+}
+html body nav ul .logo h1:hover {
+  transform: rotate(0deg);
+  transition-duration: 500ms;
+}
+html body nav ul li {
+  padding: 1vh 0;
+  font-size: 2.5vh;
+  cursor: pointer;
+  transition: background-color 500ms ease;
+}
+html body nav ul li:hover {
+  background-color: #07322e;
+  transition: background-color 500ms ease;
+}
+html body nav ul li:last-child {
+  margin-top: auto;
+  padding: 0;
+}
+html body nav ul li:last-child form input {
+  width: 100%;
+  height: 100%;
+  background-color: #144e48;
+  border: 0px;
+  color: white;
+  padding: 1vh 0;
+  transition: background-color 500ms ease;
+}
+html body nav ul li:last-child form input:hover {
+  background-color: #f4c239;
+  color: #011816;
+  transition: background-color 500ms ease;
+  cursor: pointer;
 }
 
-nav {
-	display: flex;
-	flex-direction: column;
-	text-decoration: none;
-	align-content: center;
-	justify-content: flex-start;
-	width: 10%;
-	font-size: 0.5vh;
-	background-color: #144e48;
-	align-items: stretch;
-	text-align: center;
-}
-
-
-nav ul {
-	list-style: none;
-	width: 100%;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-}
-
-nav ul li {
-	padding: 1vh 0;
-	cursor: pointer;
-}
-
-nav ul li:hover {
-	background-color: #07322e;
-}
-
-nav ul li:last-child {
-	margin-top: auto;
-	padding: 0px;
-}
-
-nav ul li:last-child form input {
-	width: 100%;
-	height: 100%;
-	background-color: #144e48;
-	border: 0px;
-	color: white;
-	padding: 1vh 0;
-}
-
-nav ul li:last-child form input:hover{
-	background-color: #07322e;
-	cursor: pointer;
-}
-
-main {
-	width: 80%;
-}
-
-header p {
-	text-align: center;
-	margin-top: 1vh
-}
-
-
-footer ul li {
-	text-decoration: none;
-}
+/*# sourceMappingURL=main.css.map */
