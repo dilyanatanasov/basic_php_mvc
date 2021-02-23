@@ -6,12 +6,18 @@
 	<link rel="stylesheet" type="text/css" href="/mvc/views/css/main.css">
 </head>
 <body>
+	<section class="cover">
+		<div class="spinner">
+		  <div class="dot1"></div>
+		  <div class="dot2"></div>
+		</div>
+	</section>
 	<nav>
 		<ul>
 			<ul>
-                <section class="logo">
-                    <h1>ikt</h1>
-                </section>
+				<section class="logo">
+				    <h1>ikt</h1>
+				</section>
 			    <li>Home</li>
 			    <li>About</li>
 			    <li>
