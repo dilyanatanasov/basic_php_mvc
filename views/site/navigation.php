@@ -17,7 +17,7 @@
         <li><a href="/mvc/index.php?controller=about">About</a></li>
         <li>
             <form action="/mvc/index.php" method="post">
-                <input type="submit" value="Logout">
+                <input type="submit" value="Logout" name="logout">
             </form>
         </li>
     </ul>
