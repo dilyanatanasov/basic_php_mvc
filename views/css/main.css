@@ -99,10 +99,10 @@ html body nav ul li:last-child form input:hover {
 .cover {
 background-color: #07322e;
 opacity: 0;
-width: 90%;
+width: 87%;
 height: 100%;
 position: absolute;
-left: 10%;
+left: 13%;
 top: 0;
 z-index: 1;
 transition: opacity 0.3s ease 1s, transform 1s ease 2s;
