@@ -18,22 +18,18 @@ class Pager
                 }
             }
 
-            $data = "";
             if (!empty($_GET["action"])) {
                 $name = $_GET["action"];
-                switch ($_GET["action"]) {
-                    case "get":
-                        $data = $controller->$name();
-                        break;
-                    default:
-                        break;
+                if (method_exists($controller, $name)) {
+                    $data = $controller->$name();
                 }
             }
         }
         return require_once VIEW_PATH . $page . ".php";
     }
 
-    public static function loadDefault($page = "login") {
+    public static function loadDefault($page = "login")
+    {
         return require_once VIEW_PATH . $page . ".php";
     }
 }

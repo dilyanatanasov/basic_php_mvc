@@ -5,6 +5,10 @@
     <title>Blog</title>
 </head>
 <body>
-    <h1>Blog <?php if (isset($data)) echo $data ?></h1>
+    <h1>Blog
+        <?php
+            if (isset($data)) echo $data->username
+        ?>
+    </h1>
 </body>
 </html>

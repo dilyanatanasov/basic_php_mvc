@@ -8,6 +8,7 @@ class Autoload
         require_once "core/Authentication.php";
         require_once "core/Pager.php";
         require_once "core/Router.php";
+        require_once "core/Db.php";
 
         if (preg_match('/Controller$/', $class_name)) {
             $folder = CONTROLLERS_PATH;

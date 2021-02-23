@@ -2,7 +2,8 @@
 
 class BlogController
 {
-    public function get() {
-        return BlogModel::getUserName();
+    public function view() {
+        $blog = new BlogModel();
+        return $blog->view();
     }
 }
