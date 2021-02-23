@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-</head>
-<body>
-    <h1>Blog
+<?php
+require_once "navigation.php";
+?>
+    <header>
+        <p>Blog</p>
+    </header>
         <?php
-            if (isset($data)) echo $data->username
+        if (isset($data)) echo $data->username
         ?>
-    </h1>
-</body>
-</html>
+<?php
+require_once "footer.php";
+?>

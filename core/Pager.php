@@ -7,10 +7,13 @@ class Pager
         $controller = false;
         if (!empty($_GET)) {
             if (!empty($_GET["controller"])) {
+                $page = $_GET["controller"];
                 switch ($_GET["controller"]) {
                     case "blog":
-                        $page = "blog";
                         $controller = new BlogController();
+                        break;
+                    case "about":
+                        $controller = new AboutController();
                         break;
                     default:
                         $page = "404";

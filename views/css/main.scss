@@ -27,20 +27,26 @@ html {
     main {
       width: 85%;
 
-      header {
-        width: 100%;
+      .content {
+        width: 95%;
+        padding: 1vh;
+        margin: auto;
 
-        p {
-          text-align: center;
+        header {
+          width: 100%;
+          text-align: left;
           margin-top: 1vh;
-          font-size: 5vh;
-        }
-      }
 
-      footer {
-        ul {
-          li {
-            text-decoration: none;
+          p {
+            font-size: 5vh;
+          }
+        }
+
+        footer {
+          ul {
+            li {
+              text-decoration: none;
+            }
           }
         }
       }
@@ -132,6 +138,10 @@ html {
           font-size: 2.5vh;
           cursor: pointer;
           transition: background-color 500ms ease;
+
+          a {
+            color: white;
+          }
 
           &:hover {
             background-color: #07322e;

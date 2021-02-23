@@ -3,7 +3,7 @@ require_once "navigation.php";
 ?>
 
     <header>
-        <p>Welcome</p>
+        <p>About</p>
     </header>
 
 <?php
