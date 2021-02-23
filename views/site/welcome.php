@@ -2,27 +2,30 @@
 <html>
 <head>
 	<title>Welcome</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="/mvc/views/css/main.css">
 </head>
 <body>
 	<nav>
 		<ul>
+            <section class="logo">
+                <h1>ikt</h1>
+            </section>
 		    <li>Home</li>
 		    <li>About</li>
 		    <li>
-		    	<form action="index.php" method="post">
+		    	<form action="/mvc/index.php" method="post">
 		    		<input type="submit" value="Logout">
 		    	</form>
 			</li>
 		  </ul>
 	</nav>
 	<main>
-		<div class="cover">
-			<div class="spinner">
-			  <div class="dot1"></div>
-			  <div class="dot2"></div>
-			</div>
-		</div>
+		<section class="cover">
+			<section class="spinner">
+			  <span class="dot1"></span>
+			  <span class="dot2"></span>
+			</section>
+		</section>
 		<header>
 			<p>Welcome</p>
 		</header>
