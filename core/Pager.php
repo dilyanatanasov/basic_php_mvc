@@ -31,8 +31,15 @@ class Pager
         return require_once VIEW_PATH . $page . ".php";
     }
 
-    public static function loadDefault($page = "login")
+    public static function loadLogin()
     {
+        $page = "login";
+        return require_once VIEW_PATH . $page . ".php";
+    }
+
+    public static function loadRegister()
+    {
+        $page = "register";
         return require_once VIEW_PATH . $page . ".php";
     }
 }

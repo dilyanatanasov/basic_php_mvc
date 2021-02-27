@@ -5,10 +5,12 @@ class Router
 {
     public static function navigate() {
         Authentication::login();
-        if (Authentication::isAuthenticated()) {
+        if (Authentication::register()) {
+            Pager::loadRegister();
+        } else if (Authentication::isAuthenticated()) {
             Pager::load();
         } else {
-            Pager::loadDefault();
+            Pager::loadLogin();
         }
     }
 }

@@ -109,5 +109,17 @@ html body .container input[type=submit]:hover {
   background-color: #f4c239;
   transition: background-color 500ms ease-out;
 }
+html body .container a {
+  padding: 1vh 0 0 0;
+  color: #f4c239;
+  font-size: 2vh;
+  transition: font-size 0.5s ease;
+}
+html body .container a:hover {
+  padding: 1vh 0 0 0;
+  opacity: 0.8;
+  font-size: 2.3vh;
+  transition: font-size 0.5s ease;
+}
 
 /*# sourceMappingURL=style.css.map */

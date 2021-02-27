@@ -24,4 +24,12 @@ class Authentication
     public static function isAuthenticated(): bool {
         return (isset($_SESSION) && !empty($_SESSION) && $_SESSION["uid"]);
     }
+
+    public static function register(): bool {
+        if (!empty($_GET["register"]) && $_GET["register"] === "true") {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
