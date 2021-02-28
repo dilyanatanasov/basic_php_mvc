@@ -19,7 +19,7 @@ define('ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/' . PROJEC_FOLDER);
 define('APPLICATION_PATH', 'mvc/');
 define('CONTROLLERS_PATH', 'controllers/');
 define('MODEL_PATH', 'models/');
+define('REPOSITORY_PATH', 'repositories/');
 define('VIEW_PATH', 'views/site/');
-
 
 ?>

@@ -2,11 +2,15 @@
 
 class BlogModel extends BaseModel
 {
-    public function view()
+    private $blogRepository;
+
+    function __construct() {
+        $this->blogRepository = new BlogRepository();
+    }
+
+    public function view($id)
     {
-        $stmt = $this->conn->prepare("SELECT * FROM credentials");
-        $stmt->execute();
-        return $stmt->fetchObject();
+        return $this->blogRepository->getById($id);
     }
 
     public function list()
@@ -14,12 +18,12 @@ class BlogModel extends BaseModel
         // TODO: Implement list() method.
     }
 
-    public function update()
+    public function update($id)
     {
         // TODO: Implement update() method.
     }
 
-    public function delete()
+    public function delete($id)
     {
         // TODO: Implement delete() method.
     }

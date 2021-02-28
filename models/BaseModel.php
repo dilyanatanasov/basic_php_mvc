@@ -1,10 +1,10 @@
 <?php
 
 
-abstract class BaseModel extends Db
+abstract class BaseModel
 {
-    public abstract function view();
+    public abstract function view($id);
     public abstract function list();
-    public abstract function update();
-    public abstract function delete();
+    public abstract function update($id);
+    public abstract function delete($id);
 }
