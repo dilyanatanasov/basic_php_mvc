@@ -141,7 +141,6 @@ html body nav ul li:last-child form input:hover {
   transition: background-color 500ms ease;
   cursor: pointer;
 }
-
 @-webkit-keyframes sk-rotate {
   100% {
     -webkit-transform: rotate(360deg);

@@ -13,7 +13,7 @@
         <section class="logo">
             <a href="/mvc/index.php"><h1>ikt</h1></a>
         </section>
-        <li><a href="/mvc/index.php?controller=blog">Blog</a></li>
+        <li><a href="/mvc/index.php?controller=blog&action=list">Blog</a></li>
         <li><a href="/mvc/index.php?controller=about">About</a></li>
         <li>
             <form action="/mvc/index.php" method="post">

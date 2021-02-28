@@ -15,7 +15,7 @@ class BlogModel extends BaseModel
 
     public function list()
     {
-        // TODO: Implement list() method.
+        return $this->blogRepository->getAll();
     }
 
     public function update($id)

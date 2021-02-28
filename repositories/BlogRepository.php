@@ -14,4 +14,15 @@ class BlogRepository extends Db
         $stmt->execute();
         return $stmt->fetchObject();
     }
+
+    public function getAll() {
+        $stmt = $this->conn->prepare("
+            SELECT 
+                * 
+            FROM 
+                credentials
+            ");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
 }

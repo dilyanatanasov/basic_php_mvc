@@ -5,7 +5,17 @@ require_once "navigation.php";
         <p>Blog</p>
     </header>
         <?php
-        if (isset($data)) echo $data->username
+        if (isset($data)) {
+            if (is_array($data)) {
+                echo "<ul>";
+                foreach ($data as $blog) {
+                    echo "<li>$blog->username</li>";
+                }
+                echo "</ul>";
+            } else {
+                echo $data->username;
+            }
+        }
         ?>
 <?php
 require_once "footer.php";

@@ -10,7 +10,6 @@ class Autoload
         require_once "core/Router.php";
         require_once "core/Db.php";
         require_once "helpers/Printer.php";
-        require_once "helpers/variables.php";
 
         if (preg_match('/Controller$/', $class_name)) {
             $folder = CONTROLLERS_PATH;
