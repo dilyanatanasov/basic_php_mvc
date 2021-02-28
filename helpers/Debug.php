@@ -1,7 +1,7 @@
 <?php
 
 
-class Printer
+class Debug
 {
     public static function parse($array) {
         echo "<pre>";
