@@ -18,7 +18,7 @@
     <input name="last_name" placeholder="Last Name" autocomplete="off">
     <input type="password" name="password" placeholder="Password" autocomplete="off">
     <input type="submit" value="Sign Up"/>
-    <a href="/mvc/index.php?controller=login">Alredy have a registration?</a>
+    <a href="/mvc/index.php?login=true">Alredy have a registration?</a>
 </form>
 </body>
 </html>

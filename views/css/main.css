@@ -93,14 +93,11 @@ html body nav ul {
   display: flex;
   flex-direction: column;
 }
-html body nav ul .logo {
-  width: 100%;
-  color: #f4c239;
-}
 html body nav ul .logo h1 {
   cursor: pointer;
   color: #f4c239;
-  font-size: 10vh;
+  padding: 1vh 0;
+  font-size: 5vh;
   text-shadow: 2px 2px 5px #011816;
   text-align: center;
 }

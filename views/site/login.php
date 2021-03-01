@@ -10,8 +10,8 @@
 <body>
 <form class="container" action="/mvc/index.php" method="post">
     <section class="logo">
-        <h1>ikt</h1>
-        <h6>Naval Academy</h6>
+        <h1>rm</h1>
+        <h6>Movie grader platform</h6>
     </section>
     <input name="username" placeholder="username" autocomplete="off">
     <input type="password" name="password" placeholder="password" autocomplete="off">

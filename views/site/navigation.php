@@ -11,15 +11,19 @@
 <nav>
     <ul>
         <section class="logo">
-            <a href="/mvc/index.php"><h1>ikt</h1></a>
+            <a href="/mvc/index.php"><h1>rate me</h1></a>
         </section>
         <li><a href="/mvc/index.php?controller=blog&action=list">Blog</a></li>
         <li><a href="/mvc/index.php?controller=about">About</a></li>
-        <li>
-            <form action="/mvc/index.php" method="post">
-                <input type="submit" value="Logout" name="logout">
-            </form>
-        </li>
+        <?php
+            echo "<li>
+                    <form action='/mvc/index.php?login=true' method='post'>
+                        <input type='submit' value='";
+            echo (!empty($_SESSION["uid"])) ? "Logout" : "Login";
+            echo "'>
+                    </form>
+                </li>";
+        ?>
     </ul>
 </nav>
 <main>
