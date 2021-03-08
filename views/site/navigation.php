@@ -5,19 +5,19 @@
 <html>
 <head>
     <title>Welcome</title>
-    <link rel="stylesheet" type="text/css" href="/mvc/views/css/main.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo APPLICATION_PATH ?>views/css/main.css">
 </head>
 <body>
 <nav>
     <ul>
         <section class="logo">
-            <a href="/mvc/index.php"><h1>rate me</h1></a>
+            <a href="<?php echo APPLICATION_PATH ?>index.php"><h1>rate me</h1></a>
         </section>
-        <li><a href="/mvc/index.php?controller=blog&action=list">Blog</a></li>
-        <li><a href="/mvc/index.php?controller=about">About</a></li>
+        <li><a href="<?php echo APPLICATION_PATH ?>index.php?controller=movies&action=listAll">Movies</a></li>
+        <li><a href="<?php echo APPLICATION_PATH ?>index.php?controller=contact_us">Contact Us</a></li>
         <?php
             echo "<li>
-                    <form action='/mvc/index.php?login=true' method='post'>
+                    <form action='" . APPLICATION_PATH . "index.php?login=true' method='post'>
                         <input type='submit' value='";
             echo (!empty($_SESSION["uid"])) ? "Logout" : "Login";
             echo "'>

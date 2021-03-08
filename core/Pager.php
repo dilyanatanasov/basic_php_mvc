@@ -9,11 +9,11 @@ class Pager
             if (!empty($_GET["controller"])) {
                 $page = $_GET["controller"];
                 switch ($_GET["controller"]) {
-                    case "blog":
-                        $controller = new BlogController();
+                    case "movies":
+                        $controller = new MoviesController();
                         break;
-                    case "about":
-                        $controller = new AboutController();
+                    case "contact_us":
+                        $controller = new ContactUsController();
                         break;
                     default:
                         $page = "404";
