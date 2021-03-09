@@ -15,6 +15,9 @@ class Pager
                     case "contact_us":
                         $controller = new ContactUsController();
                         break;
+                    case "user":
+                        $controller = new UserController();
+                        break;
                     default:
                         $page = "404";
                         break;
