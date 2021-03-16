@@ -2,7 +2,7 @@
 
 class Pager
 {
-    public static function load(?string $page = "welcome")
+    public static function load($page = "welcome")
     {
         $controller = false;
         if (!empty($_GET)) {
@@ -11,12 +11,6 @@ class Pager
                 switch ($_GET["controller"]) {
                     case "movies":
                         $controller = new MoviesController();
-                        break;
-                    case "contact_us":
-                        $controller = new ContactUsController();
-                        break;
-                    case "user":
-                        $controller = new UserController();
                         break;
                     default:
                         $page = "404";

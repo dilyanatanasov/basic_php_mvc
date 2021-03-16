@@ -5,14 +5,13 @@ class MoviesModel extends BaseModel
 {
     private $moviesRepository;
 
-    public function __construct()
-    {
+    function __construct() {
         $this->moviesRepository = new MoviesRepository();
     }
 
     public function create($data)
     {
-        return $this->moviesRepository->create($data);
+        // TODO: Implement create() method.
     }
 
     public function view($id)
@@ -20,23 +19,18 @@ class MoviesModel extends BaseModel
         return $this->moviesRepository->getById($id);
     }
 
-    public function listByCategory($category)
-    {
-        return $this->moviesRepository->getByCategory($category);
-    }
-
     public function listAll()
     {
-        return $this->moviesRepository->getAll();
+        return $this->moviesRepository->getAllMovies();
     }
 
     public function update($data)
     {
-        return $this->moviesRepository->update($data);
+        // TODO: Implement update() method.
     }
 
     public function delete($id)
     {
-        return $this->moviesRepository->delete($id);
+        // TODO: Implement delete() method.
     }
 }

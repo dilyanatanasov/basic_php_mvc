@@ -5,23 +5,21 @@
 <html>
 <head>
     <title>Welcome</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo APPLICATION_PATH ?>views/css/main.css">
+    <!--<link rel="stylesheet" type="text/css" href="/ikt-second-year/views/css/main.css">-->
 </head>
 <body>
 <nav>
     <ul>
         <section class="logo">
-            <a href="<?php echo APPLICATION_PATH ?>index.php"><h1>rate me</h1></a>
+            <a href="<?php echo APPLICATION_PATH?>index.php"><h1>rate me</h1></a>
         </section>
-        <li><a href="<?php echo APPLICATION_PATH ?>index.php?controller=movies&action=listAll">Movies</a></li>
-        <li><a href="<?php echo APPLICATION_PATH?>index.php?controller=user&action=listAll">User</a></li>
-        <li><a href="<?php echo APPLICATION_PATH ?>index.php?controller=contact_us">Contact Us</a></li>
+        <li><a href="<?php echo APPLICATION_PATH?>index.php?controller=movies&action=listAll">Movies</a></li>
         <?php
-            echo "<li>
+        echo "<li>
                     <form action='" . APPLICATION_PATH . "index.php?login=true' method='post'>
                         <input type='submit' value='";
-            echo (!empty($_SESSION["uid"])) ? "Logout" : "Login";
-            echo "'>
+        echo (!empty($_SESSION["uid"])) ? "Logout" : "Login";
+        echo "'>
                     </form>
                 </li>";
         ?>
