@@ -11,7 +11,7 @@ class MoviesModel extends BaseModel
 
     public function create($data)
     {
-        // TODO: Implement create() method.
+        return $this->moviesRepository->create($data);
     }
 
     public function view($id)
@@ -26,11 +26,11 @@ class MoviesModel extends BaseModel
 
     public function update($data)
     {
-        // TODO: Implement update() method.
+        return $this->moviesRepository->update($data);
     }
 
     public function delete($id)
     {
-        // TODO: Implement delete() method.
+        return $this->moviesRepository->delete($id);
     }
 }

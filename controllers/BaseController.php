@@ -3,9 +3,9 @@
 
 abstract class BaseController
 {
-    public abstract function create($data);
-    public abstract function view($id);
+    public abstract function create();
+    public abstract function view();
     public abstract function listAll();
-    public abstract function update($data);
-    public abstract function delete($id);
+    public abstract function update();
+    public abstract function delete();
 }

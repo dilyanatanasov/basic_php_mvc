@@ -3,21 +3,75 @@
 
 class MoviesRepository extends Db
 {
-    public function getAllMovies() {
+    public function create($data)
+    {
         $sql = "
-            SELECT * FROM movies
+            INSERT INTO imdb.movies(id, title, description, main_actor, duration, rating, thumbnail)
+            VALUES(NULL, :title, :description, :main_actor, :duration, :rating, :thumbnail)
+        ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindValue(":title", $data["title"], PDO::PARAM_STR);
+        $stmt->bindValue(":description", $data["description"], PDO::PARAM_STR);
+        $stmt->bindValue(":main_actor", $data["main_actor"], PDO::PARAM_STR);
+        $stmt->bindValue(":duration", $data["duration"], PDO::PARAM_INT);
+        $stmt->bindValue(":rating", $data["rating"], PDO::PARAM_INT);
+        $stmt->bindValue(":thumbnail", $data["thumbnail"], PDO::PARAM_STR);
+        return $stmt->execute();
+    }
+
+    public function getAllMovies()
+    {
+        $sql = "
+            SELECT * FROM imdb.movies
         ";
         $stmt = $this->conn->query($sql);
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function getById($id) {
+    public function getById($id)
+    {
         $sql = "
-            SELECT * FROM movies WHERE id = :id
+            SELECT * FROM imdb.movies WHERE id = :id
         ";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindValue(":id", $id, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function update($data)
+    {
+        $sql = "
+            UPDATE imdb.movies
+            SET 
+                title = :title,
+                description = :description,
+                main_actor = :main_actor,
+                duration = :duration,
+                rating = :rating,
+                thumbnail = :thumbnail
+            WHERE
+                id = :id
+        ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindValue(":id", $data["id"], PDO::PARAM_INT);
+        $stmt->bindValue(":title", $data["title"], PDO::PARAM_STR);
+        $stmt->bindValue(":description", $data["description"], PDO::PARAM_STR);
+        $stmt->bindValue(":main_actor", $data["main_actor"], PDO::PARAM_STR);
+        $stmt->bindValue(":duration", $data["duration"], PDO::PARAM_INT);
+        $stmt->bindValue(":rating", $data["rating"], PDO::PARAM_INT);
+        $stmt->bindValue(":thumbnail", $data["thumbnail"], PDO::PARAM_STR);
+        return $stmt->execute();
+    }
+
+    public function delete($id)
+    {
+        $sql = "
+            DELETE FROM imdb.movies
+            WHERE id = :id    
+        ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindValue(":id", $id, PDO::PARAM_INT);
+        return $stmt->execute();
     }
 }

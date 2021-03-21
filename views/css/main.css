@@ -64,7 +64,7 @@ html body main .content .split-content .movies {
   flex-flow: wrap;
   justify-content: space-evenly;
 }
-html body main .content .split-content .movies img {
+html body main .content .split-content .movies a img {
   width: 30%;
   padding-bottom: 2vh;
 }

@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>Welcome</title>
-    <!--<link rel="stylesheet" type="text/css" href="/ikt-second-year/views/css/main.css">-->
+    <link rel="stylesheet" type="text/css" href="<?php echo APPLICATION_PATH?>views/css/main.css">
 </head>
 <body>
 <nav>

@@ -3,7 +3,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_DATABASE', 'mvc');
+define('DB_DATABASE', 'imdb');
 
 define('APPLICATION_PATH', '/mvc/');
 define('CONTROLLERS_PATH', 'controllers/');
