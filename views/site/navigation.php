@@ -16,6 +16,7 @@
         </section>
         <li><a href="<?php echo APPLICATION_PATH?>index.php?controller=movies&action=listAll">Movies</a></li>
         <li><a href="<?php echo APPLICATION_PATH?>index.php?controller=movies&action=create">Create</a></li>
+        <li><a href="<?php echo APPLICATION_PATH?>index.php?controller=user&action=listAll">Users</a></li>
         <?php
         echo "<li>
                     <form action='" . APPLICATION_PATH . "index.php?login=true' method='post'>

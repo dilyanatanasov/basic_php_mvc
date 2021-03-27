@@ -12,6 +12,9 @@ class Pager
                     case "movies":
                         $controller = new MoviesController();
                         break;
+                    case "user":
+                        $controller = new UserController();
+                        break;
                     default:
                         $page = "404";
                         break;

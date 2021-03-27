@@ -1,22 +1,16 @@
 <?php
 require_once "navigation.php";
 
-?>
-    <section>
-        <h1>User</h1>
-    </section>
-<?php
-
-if (isset($data)) {
-    if (is_array($data)) {
-        echo "<ul>";
-        foreach ($data as $user) {
-            echo "<li><a href='" . APPLICATION_PATH . "index.php?controller=user&action=delete&user_id=$user->id'>$user->username</a></li>";
-        }
-        echo "</ul>";
-    } else {
-        echo $data->username;
+if (isset($data) && !empty($data)) {
+    switch ($_GET["action"]) {
+        case "listALl":
+            require_once "html/user/userList.php";
+            break;
+        default:
+            require_once "html/user/userList.php";
+            break;
     }
 }
+
 require_once "footer.php";
 ?>

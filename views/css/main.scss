@@ -48,7 +48,7 @@ html {
 
           a {
             color: white;
-            background-color: #1fa580;
+            background-color: $secondary-color;
           }
 
           form {
@@ -88,13 +88,22 @@ html {
                 }
               }
 
+              span {
+                text-align: center;
+                padding: 5px 0;
+              }
+
               .delete {
                 background-color: indianred;
+                transition: background-color 500ms ease;
+                border-radius: 5px;
                 color: white;
                 text-align: center;
 
                 &:hover {
                   background-color: #d24949;
+                  transition: background-color 500ms ease;
+                  cursor: pointer;
                 }
               }
             }
@@ -122,17 +131,30 @@ html {
               border-radius: 5px;
               margin: 5px 0;
               padding: 5px;
+
+              &:focus::-webkit-input-placeholder  {
+                opacity: 0;
+                transition: opacity 400ms ease;
+              }
             }
 
             input[type="submit"] {
               padding: 5px;
               width: 100%;
-              background-color: #1fa580;
+              background-color: $secondary-color;
+              transition: background-color 500ms ease;
               color: white;
               margin-bottom: 160px;
+
+              &:hover {
+                background-color: $secondary-dark2;
+                transition: background-color 500ms ease;
+                cursor: pointer;
+              }
             }
           }
         }
+
         .update {
           form {
             label {
@@ -154,14 +176,26 @@ html {
               border-radius: 5px;
               margin: 5px 0;
               padding: 5px;
+
+              &:focus::-webkit-input-placeholder  {
+                opacity: 0;
+                transition: opacity 400ms ease;
+              }
             }
 
             input[type="submit"] {
               padding: 5px;
               width: 100%;
-              background-color: #1fa580;
+              background-color: $secondary-color;
+              transition: background-color 500ms ease;
               color: white;
               margin-bottom: 160px;
+
+              &:hover {
+                background-color: $secondary-dark2;
+                transition: background-color 500ms ease;
+                cursor: pointer;
+              }
             }
           }
         }
@@ -197,12 +231,19 @@ html {
             }
 
             .update {
-              background-color: #1fa580;
+              background-color: $secondary-color;
+              transition: background-color 500ms ease;
               color: white;
               width: 100%;
               text-align: center;
               border-radius: 5px;
               padding: 5px;
+
+              &:hover {
+                background-color: $secondary-dark2;
+                transition: background-color 500ms ease;
+                cursor: pointer;
+              }
             }
           }
 
@@ -216,9 +257,72 @@ html {
             h3 {
               width: 70%;
               padding: 5px;
-              border: 1px solid #1fa580;
+              border: 1px solid $secondary-color;
               border-radius: 5px;
               margin: 5px;
+
+              &:hover {
+                background-color: $secondary-dark2;
+                transition: background-color 500ms ease;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        .user {
+          margin: 10px 0;
+          display: flex;
+
+          table {
+            width: 100%;
+            text-align: left;
+
+            thead {
+              background-color: #144e48;
+
+              tr {
+                th {
+                  border-radius: 5px;
+                  padding: 5px;
+                }
+                th:last-child {
+                  text-align: center;
+                }
+              }
+            }
+
+            tbody {
+              tr {
+                td {
+                  padding: 5px;
+                }
+                form {
+                  button {
+                    margin: 2px 0;
+                    border: none;
+                    border-radius: 5px;
+                    color: white;
+                    padding: 5px;
+                    width: 100%;
+                  }
+
+                  .update {
+                    background-color: $secondary-color;
+                    transition: background-color 500ms ease;
+
+                    &:hover {
+                      background-color: $secondary-dark2;
+                      transition: background-color 500ms ease;
+                      cursor: pointer;
+                    }
+                  }
+
+                  .delete {
+                    background-color: indianred;
+                  }
+                }
+              }
             }
           }
         }

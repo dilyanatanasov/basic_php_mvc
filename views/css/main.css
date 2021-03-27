@@ -75,13 +75,21 @@ html body main .content .split-content .movies .movie .view img {
   width: 100%;
   height: 100%;
 }
+html body main .content .split-content .movies .movie span {
+  text-align: center;
+  padding: 5px 0;
+}
 html body main .content .split-content .movies .movie .delete {
   background-color: indianred;
+  transition: background-color 500ms ease;
+  border-radius: 5px;
   color: white;
   text-align: center;
 }
 html body main .content .split-content .movies .movie .delete:hover {
   background-color: #d24949;
+  transition: background-color 500ms ease;
+  cursor: pointer;
 }
 html body main .content .create form label {
   display: inline-block;
@@ -101,12 +109,22 @@ html body main .content .create form input, html body main .content .create form
   margin: 5px 0;
   padding: 5px;
 }
+html body main .content .create form input:focus::-webkit-input-placeholder, html body main .content .create form textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
 html body main .content .create form input[type=submit] {
   padding: 5px;
   width: 100%;
   background-color: #1fa580;
+  transition: background-color 500ms ease;
   color: white;
   margin-bottom: 160px;
+}
+html body main .content .create form input[type=submit]:hover {
+  background-color: #144e48;
+  transition: background-color 500ms ease;
+  cursor: pointer;
 }
 html body main .content .update form label {
   display: inline-block;
@@ -126,12 +144,22 @@ html body main .content .update form input, html body main .content .update form
   margin: 5px 0;
   padding: 5px;
 }
+html body main .content .update form input:focus::-webkit-input-placeholder, html body main .content .update form textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
 html body main .content .update form input[type=submit] {
   padding: 5px;
   width: 100%;
   background-color: #1fa580;
+  transition: background-color 500ms ease;
   color: white;
   margin-bottom: 160px;
+}
+html body main .content .update form input[type=submit]:hover {
+  background-color: #144e48;
+  transition: background-color 500ms ease;
+  cursor: pointer;
 }
 html body main .content .view {
   display: flex;
@@ -162,11 +190,17 @@ html body main .content .view .heading .rating {
 }
 html body main .content .view .heading .update {
   background-color: #1fa580;
+  transition: background-color 500ms ease;
   color: white;
   width: 100%;
   text-align: center;
   border-radius: 5px;
   padding: 5px;
+}
+html body main .content .view .heading .update:hover {
+  background-color: #144e48;
+  transition: background-color 500ms ease;
+  cursor: pointer;
 }
 html body main .content .view .main {
   display: flex;
@@ -181,6 +215,52 @@ html body main .content .view .main h3 {
   border: 1px solid #1fa580;
   border-radius: 5px;
   margin: 5px;
+}
+html body main .content .view .main h3:hover {
+  background-color: #144e48;
+  transition: background-color 500ms ease;
+  cursor: pointer;
+}
+html body main .content .user {
+  margin: 10px 0;
+  display: flex;
+}
+html body main .content .user table {
+  width: 100%;
+  text-align: left;
+}
+html body main .content .user table thead {
+  background-color: #144e48;
+}
+html body main .content .user table thead tr th {
+  border-radius: 5px;
+  padding: 5px;
+}
+html body main .content .user table thead tr th:last-child {
+  text-align: center;
+}
+html body main .content .user table tbody tr td {
+  padding: 5px;
+}
+html body main .content .user table tbody tr form button {
+  margin: 2px 0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  width: 100%;
+}
+html body main .content .user table tbody tr form .update {
+  background-color: #1fa580;
+  transition: background-color 500ms ease;
+}
+html body main .content .user table tbody tr form .update:hover {
+  background-color: #144e48;
+  transition: background-color 500ms ease;
+  cursor: pointer;
+}
+html body main .content .user table tbody tr form .delete {
+  background-color: indianred;
 }
 html body main .content footer ul li {
   text-decoration: none;

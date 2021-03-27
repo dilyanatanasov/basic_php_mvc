@@ -41,7 +41,7 @@ class UserRepository extends Db
             DELETE FROM imdb.user_credentials WHERE id = :id
         ";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bindValue(":id", $id, PDO::PARAM_STR);
+        $stmt->bindValue(":id", $id, PDO::PARAM_INT);
         return $stmt->execute();
     }
 }

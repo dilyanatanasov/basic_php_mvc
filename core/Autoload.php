@@ -11,6 +11,7 @@ class Autoload
         require_once "core/Db.php";
         require_once "helpers/Debug.php";
         require_once "helpers/RatingHelper.php";
+        require_once "helpers/AccessHelper.php";
 
         if (preg_match('/Controller$/', $class_name)) {
             $folder = CONTROLLERS_PATH;

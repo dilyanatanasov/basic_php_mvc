@@ -14,8 +14,25 @@ class UserController extends BaseController
     }
 
     public function delete() {
-        $id = $_GET["user_id"];
-        $this->userModel->delete($id);
+        if (!empty($_POST) && !empty($_POST["delete_id"])) {
+            $id = $_POST["delete_id"];
+            $this->userModel->delete($id);
+        }
         header("Location: index.php?controller=user&action=listAll");
+    }
+
+    public function create()
+    {
+        // TODO: Implement create() method.
+    }
+
+    public function view()
+    {
+        // TODO: Implement view() method.
+    }
+
+    public function update()
+    {
+        // TODO: Implement update() method.
     }
 }
