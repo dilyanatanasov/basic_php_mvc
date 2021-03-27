@@ -24,6 +24,11 @@ class MoviesModel extends BaseModel
         return $this->moviesRepository->getAllMovies();
     }
 
+    public function search($topic)
+    {
+        return $this->moviesRepository->getByTitleOrDescription($topic);
+    }
+
     public function update($data)
     {
         return $this->moviesRepository->update($data);

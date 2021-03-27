@@ -31,7 +31,11 @@ class MoviesController extends BaseController
 
     public function listAll()
     {
-        return $this->moviesModel->listAll();
+        if (!empty($_POST) && !empty($_POST["search"])) {
+            return $this->moviesModel->search($_POST["search"]);
+        } else {
+            return $this->moviesModel->listAll();
+        }
     }
 
     public function update()

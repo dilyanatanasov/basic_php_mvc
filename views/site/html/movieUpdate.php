@@ -1,14 +1,22 @@
 <?php
 
 echo "<section class='content'>
-        <form action='". APPLICATION_PATH ."index.php?controller=movies&action=update&movie_id=$data->id' method='post'>
-            <input type='number' name='id' hidden='true' value='$data->id'><br>
-            <input type='text' name='title' value='$data->title'><br>
-            <input type='text' name='description' value='$data->description'><br>
-            <input type='text' name='main_actor' value='$data->main_actor'><br>
-            <input type='text' name='duration' value='$data->duration'><br>
-            <input type='text' name='rating' value='$data->rating'><br>
-            <input type='text' name='thumbnail' value='$data->thumbnail'><br>
-            <input type='submit' name='update' value='Update'>
-        </form>
+        <section class='update'>
+            <form action='". APPLICATION_PATH ."index.php?controller=movies&action=update&movie_id=$data->id' method='post'>
+                <input style='display: none' type='number' name='id' hidden='true' value='$data->id'><br>
+                <label>Title</label>
+                <input type='text' name='title' placeholder='Title' value='$data->title'><br>
+                <label for='description'>Description</label>
+                <textarea name='description' placeholder='Description'>$data->description</textarea><br>
+                <label>Main Actor</label>
+                <input type='text' name='main_actor' placeholder='Main Actor' value='$data->main_actor'><br>
+                <label>Duration</label>
+                <input type='text' name='duration' placeholder='Duration' value='$data->duration'><br>
+                <label>Rating</label>
+                <input type='text' name='rating' placeholder='Rating' value='$data->rating'><br>
+                <label>Thumbnail</label>
+                <input type='text' name='thumbnail' placeholder='Thumbnail' value='$data->thumbnail'><br>
+                <input type='submit' name='update' value='Update'>
+            </form>
+        </section>
     </section>";

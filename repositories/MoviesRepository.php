@@ -28,6 +28,18 @@ class MoviesRepository extends Db
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
+    public function getByTitleOrDescription($topic)
+    {
+        $sql = "
+            SELECT * FROM imdb.movies
+            WHERE title LIKE CONCAT( '%', :topic, '%') OR description LIKE CONCAT( '%', :topic, '%')
+        ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindValue(":topic", $topic, PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
     public function getById($id)
     {
         $sql = "

@@ -4,17 +4,17 @@ echo "<section class='content'>
         <section class='create'>
             <form action='" . APPLICATION_PATH . "index.php?controller=movies&action=create' method='post'>
                 <label>Title</label>
-                <input type='text' name='title'><br>
+                <input type='text' name='title' placeholder='Title'><br>
                 <label for='description'>Description</label>
-                <textarea name='description'></textarea><br>
+                <textarea name='description' placeholder='Description'></textarea><br>
                 <label>Main Actor</label>
-                <input type='text' name='main_actor'><br>
+                <input type='text' name='main_actor' placeholder='Main Actor'><br>
                 <label>Duration</label>
-                <input type='text' name='duration'><br>
+                <input type='text' name='duration' placeholder='Duration'><br>
                 <label>Rating</label>
-                <input type='text' name='rating'><br>
+                <input type='text' name='rating' placeholder='Rating'><br>
                 <label>Thumbnail</label>
-                <input type='text' name='thumbnail'><br>
+                <input type='text' name='thumbnail' placeholder='Thumbnail'><br>
                 <input type='submit' name='create' value='Create'>
             </form>
         </section>

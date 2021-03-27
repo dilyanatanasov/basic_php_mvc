@@ -5,7 +5,7 @@ class UserRepository extends Db
 {
     public function create($data) {
         $sql = "
-            INSERT INTO user_credentials(id, username, first_name, last_name, password)
+            INSERT INTO imdb.user_credentials(id, username, first_name, last_name, password)
             VALUES(NULL, :username, :first_name, :last_name, :password);
         ";
         $stmt = $this->conn->prepare($sql);
@@ -18,7 +18,7 @@ class UserRepository extends Db
 
     public function getByUsernameAndPassword($username, $password) {
         $sql = "
-            SELECT * FROM user_credentials WHERE username = :username AND password = :password
+            SELECT * FROM imdb.user_credentials WHERE username = :username AND password = :password
         ";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindValue(":username", $username, PDO::PARAM_STR);
@@ -29,7 +29,7 @@ class UserRepository extends Db
 
     public function getAll() {
         $sql = "
-            SELECT * FROM user_credentials
+            SELECT * FROM imdb.user_credentials
         ";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
@@ -38,7 +38,7 @@ class UserRepository extends Db
 
     public function delete($id) {
         $sql = "
-            DELETE FROM user_credentials WHERE id = :id
+            DELETE FROM imdb.user_credentials WHERE id = :id
         ";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindValue(":id", $id, PDO::PARAM_STR);
