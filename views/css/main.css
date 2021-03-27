@@ -24,6 +24,7 @@ html body main {
 }
 html body main .content {
   width: 95%;
+  height: 100%;
   padding: 1vh;
   margin: auto;
   display: flex;
@@ -37,6 +38,10 @@ html body main .content header {
 html body main .content header p {
   font-size: 5vh;
 }
+html body main .content header a {
+  color: white;
+  background-color: #1fa580;
+}
 html body main .content header form {
   width: 100%;
   margin-bottom: 20px;
@@ -48,25 +53,72 @@ html body main .content header form input {
 }
 html body main .content .split-content {
   display: flex;
-  flex-direction: row;
-}
-html body main .content .split-content .categories {
-  height: 100%;
-  width: 15%;
-}
-html body main .content .split-content .categories ul {
-  list-style-type: none;
 }
 html body main .content .split-content .movies {
-  width: 85%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
   justify-content: space-evenly;
 }
-html body main .content .split-content .movies a img {
+html body main .content .split-content .movies .movie {
+  display: flex;
+  flex-direction: column;
   width: 30%;
-  padding-bottom: 2vh;
+  height: 300px;
+  margin-bottom: 30px;
+}
+html body main .content .split-content .movies .movie .view {
+  height: 100%;
+}
+html body main .content .split-content .movies .movie .view img {
+  width: 100%;
+  height: 100%;
+}
+html body main .content .split-content .movies .movie .delete {
+  background-color: indianred;
+  color: white;
+  text-align: center;
+}
+html body main .content .split-content .movies .movie .delete:hover {
+  background-color: #d24949;
+}
+html body main .content .create form label {
+  display: inline-block;
+  width: 15%;
+  padding: 5px;
+  margin: 5px 0;
+}
+html body main .content .create form label[for=description] {
+  padding: 15px 5px;
+}
+html body main .content .create form input, html body main .content .create form textarea {
+  float: right;
+  display: inline-block;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 5px;
+}
+html body main .content .create form input[type=submit] {
+  padding: 5px;
+  width: 100%;
+  background-color: #1fa580;
+  color: white;
+  margin-bottom: 160px;
+}
+html body main .content .view {
+  display: flex;
+  flex-direction: row;
+}
+html body main .content .view .heading {
+  display: flex;
+  flex-direction: column;
+}
+html body main .content .view .main {
+  display: flex;
+  flex-direction: column;
 }
 html body main .content footer ul li {
   text-decoration: none;

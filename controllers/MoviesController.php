@@ -38,7 +38,7 @@ class MoviesController extends BaseController
     {
         if (!empty($_POST["update"])) {
             $this->moviesModel->update($_POST);
-            header("Location: index.php?controller=movies&action=listAll");
+            header("Location: index.php?controller=movies&action=view&movie_id=" . $_GET["movie_id"]);
         } elseif (!empty($_GET["movie_id"])) {
             return $this->moviesModel->view($_GET["movie_id"]);
         }
