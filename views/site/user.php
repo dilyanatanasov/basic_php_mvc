@@ -6,6 +6,9 @@ if (isset($data) && !empty($data)) {
         case "listALl":
             require_once "html/user/userList.php";
             break;
+        case "update":
+            require_once "html/user/userUpdate.php";
+            break;
         default:
             require_once "html/user/userList.php";
             break;

@@ -23,7 +23,7 @@ foreach ($data as $user) {
     echo "</td>
             <td>
                 <form action='" . APPLICATION_PATH . "index.php?controller=user&action=update' method='post'>
-                    <button class='update' type='submit'>Update</button>
+                    <button class='update' name='user_id' value='$user->id' type='submit'>Update</button>
                 </form>
                 <form action='" . APPLICATION_PATH . "index.php?controller=user&action=delete' method='post'>
                     <button class='delete' type='submit' name='delete_id' value='$user->id'>Delete</button>

@@ -33,6 +33,11 @@ class UserController extends BaseController
 
     public function update()
     {
-        // TODO: Implement update() method.
+        if (!empty($_POST) && !empty($_POST["update"])) {
+            $this->userModel->update($_POST);
+            header("Location: index.php?controller=user&action=listAll");
+        } else {
+            return $this->userModel->view($_POST["user_id"]);
+        }
     }
 }

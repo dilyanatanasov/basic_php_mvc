@@ -16,6 +16,16 @@ class UserRepository extends Db
         return $stmt->execute();
     }
 
+    public function getById($id) {
+        $sql = "
+            SELECT * FROM imdb.user_credentials WHERE id = :id
+        ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindValue(":id", $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_OBJ);
+    }
+
     public function getByUsernameAndPassword($username, $password) {
         $sql = "
             SELECT * FROM imdb.user_credentials WHERE username = :username AND password = :password
@@ -34,6 +44,26 @@ class UserRepository extends Db
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    public function update($data) {
+        $sql = "
+            UPDATE imdb.user_credentials
+            SET
+                username = :username,
+                first_name = :first_name,
+                last_name = :last_name,
+                access = :access
+            WHERE
+                id = :id
+        ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindValue(":username", $data["username"], PDO::PARAM_STR);
+        $stmt->bindValue(":first_name", $data["first_name"], PDO::PARAM_STR);
+        $stmt->bindValue(":last_name", $data["last_name"], PDO::PARAM_STR);
+        $stmt->bindValue(":access", $data["access"], PDO::PARAM_INT);
+        $stmt->bindValue(":id", $data["id"], PDO::PARAM_INT);
+        return $stmt->execute();
     }
 
     public function delete($id) {

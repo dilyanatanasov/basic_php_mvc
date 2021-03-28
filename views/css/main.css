@@ -51,6 +51,19 @@ html body main .content header form input {
   padding: 0.5vh;
   border-radius: 1vh;
 }
+html body main .content header form button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #1fa580;
+  transition: background-color 500ms ease;
+  color: white;
+}
+html body main .content header form button:hover {
+  background-color: #144e48;
+  transition: background-color 500ms ease;
+  cursor: pointer;
+}
 html body main .content .split-content {
   display: flex;
 }
@@ -66,12 +79,13 @@ html body main .content .split-content .movies .movie {
   flex-direction: column;
   width: 30%;
   height: 300px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 html body main .content .split-content .movies .movie .view {
   height: 100%;
 }
 html body main .content .split-content .movies .movie .view img {
+  border-radius: 5px;
   width: 100%;
   height: 100%;
 }
@@ -83,6 +97,7 @@ html body main .content .split-content .movies .movie .delete {
   background-color: indianred;
   transition: background-color 500ms ease;
   border-radius: 5px;
+  padding: 5px;
   color: white;
   text-align: center;
 }
@@ -148,16 +163,23 @@ html body main .content .update form input:focus::-webkit-input-placeholder, htm
   opacity: 0;
   transition: opacity 400ms ease;
 }
+html body main .content .update form select {
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+  width: 81.5%;
+}
 html body main .content .update form input[type=submit] {
   padding: 5px;
   width: 100%;
-  background-color: #1fa580;
+  background-color: #f4c239;
   transition: background-color 500ms ease;
   color: white;
   margin-bottom: 160px;
 }
 html body main .content .update form input[type=submit]:hover {
-  background-color: #144e48;
+  background-color: #c19622;
   transition: background-color 500ms ease;
   cursor: pointer;
 }
@@ -189,7 +211,7 @@ html body main .content .view .heading .rating {
   text-align: center;
 }
 html body main .content .view .heading .update {
-  background-color: #1fa580;
+  background-color: #f4c239;
   transition: background-color 500ms ease;
   color: white;
   width: 100%;
@@ -198,7 +220,7 @@ html body main .content .view .heading .update {
   padding: 5px;
 }
 html body main .content .view .heading .update:hover {
-  background-color: #144e48;
+  background-color: #c19622;
   transition: background-color 500ms ease;
   cursor: pointer;
 }
@@ -216,7 +238,25 @@ html body main .content .view .main h3 {
   border-radius: 5px;
   margin: 5px;
 }
-html body main .content .view .main h3:hover {
+html body main .content .view .main h3 input {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 95%;
+  margin-bottom: 5px;
+  display: block;
+}
+html body main .content .view .main h3 button {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  display: block;
+  background-color: #1fa580;
+  transition: background-color 500ms ease;
+  color: white;
+}
+html body main .content .view .main h3 button:hover {
   background-color: #144e48;
   transition: background-color 500ms ease;
   cursor: pointer;
@@ -251,11 +291,11 @@ html body main .content .user table tbody tr form button {
   width: 100%;
 }
 html body main .content .user table tbody tr form .update {
-  background-color: #1fa580;
+  background-color: #f4c239;
   transition: background-color 500ms ease;
 }
 html body main .content .user table tbody tr form .update:hover {
-  background-color: #144e48;
+  background-color: #c19622;
   transition: background-color 500ms ease;
   cursor: pointer;
 }

@@ -16,5 +16,10 @@ echo "</h3>
             <h3>Description: $data->description</h3>
             <h3>Main Actor: $data->main_actor</h3>
             <h3>Duration: $data->duration</h3>    
+            <h3>
+              Comments:
+                <input type='text' placeholder='I like the movie...'>
+                <button type='submit'>Comment</button>
+            </h3>
         </section>
     </section>";
