@@ -18,8 +18,8 @@ echo "</h3>
             <h3>Duration: $data->duration</h3>    
             <h3>
               Comments:
-                <input type='text' placeholder='I like the movie...'>
-                <button type='submit'>Comment</button>
+                <input id='message' type='text' placeholder='I like the movie...'>
+                <button id='addComment' type='submit'>Comment</button>
             </h3>
         </section>
     </section>";

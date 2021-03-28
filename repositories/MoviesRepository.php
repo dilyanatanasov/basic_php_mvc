@@ -56,19 +56,20 @@ class MoviesRepository extends Db
         if (empty($data)) {
             return true;
         }
+        $thumbnail = "";
+        if (isset($data["thumbnail"]) && !empty($data["thumbnail"])) $thumbnail = "thumbnail = :thumbnail,";
         $sql = "
             UPDATE imdb.movies
             SET 
-                " . ($data["thumbnail"]) ? "thumbnail = :thumbnail" : "" . ",
-                " . ($data["title"]) ? "title = :title" : "" . ",
-                " . ($data["description"]) ? "description = :description" : "" . ",
-                " . ($data["main_actor"]) ? "main_actor = :main_actor" : "" . ",
-                " . ($data["duration"]) ? "duration = :duration" : "" . ",
-                " . ($data["rating"]) ? "rating = :rating" : "" . "
+                title = :title,
+                description = :description,
+                main_actor = :main_actor,
+                " . $thumbnail ."
+                duration = :duration,
+                rating = :rating
             WHERE
                 id = :id
         ";
-        Debug::parseAndDie($sql);
         $stmt = $this->conn->prepare($sql);
         $stmt->bindValue(":id", $data["id"], PDO::PARAM_INT);
         $stmt->bindValue(":title", $data["title"], PDO::PARAM_STR);
@@ -76,7 +77,7 @@ class MoviesRepository extends Db
         $stmt->bindValue(":main_actor", $data["main_actor"], PDO::PARAM_STR);
         $stmt->bindValue(":duration", $data["duration"], PDO::PARAM_INT);
         $stmt->bindValue(":rating", $data["rating"], PDO::PARAM_INT);
-        $stmt->bindValue(":thumbnail", $data["thumbnail"], PDO::PARAM_STR);
+        if (!empty($thumbnail)) $stmt->bindValue(":thumbnail", $data["thumbnail"], PDO::PARAM_STR);
         return $stmt->execute();
     }
 

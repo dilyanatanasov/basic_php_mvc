@@ -49,7 +49,7 @@ class MoviesController extends BaseController
     public function update()
     {
         if (!empty($_POST["update"])) {
-            if (!empty($_FILES["fileToUpload"]["error"])) {
+            if (empty($_FILES["fileToUpload"]["error"])) {
                 $fileName = $this->uploadManager->uploadImg();
                 if (!$fileName) {
                     echo "Error on upload";
@@ -57,7 +57,6 @@ class MoviesController extends BaseController
                     $_POST["thumbnail"] = $fileName;
                 }
             }
-
             $this->moviesModel->update($_POST);
             header("Location: index.php?controller=movies&action=view&movie_id=" . $_GET["movie_id"]);
         } elseif (!empty($_GET["movie_id"])) {
