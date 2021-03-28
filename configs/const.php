@@ -10,5 +10,6 @@ define('CONTROLLERS_PATH', 'controllers/');
 define('MODEL_PATH', 'models/');
 define('REPOSITORY_PATH', 'repositories/');
 define('VIEW_PATH', 'views/site/');
+define('IMG_PATH', 'views/img/');
 
 ?>

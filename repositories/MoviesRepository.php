@@ -53,18 +53,22 @@ class MoviesRepository extends Db
 
     public function update($data)
     {
+        if (empty($data)) {
+            return true;
+        }
         $sql = "
             UPDATE imdb.movies
             SET 
-                title = :title,
-                description = :description,
-                main_actor = :main_actor,
-                duration = :duration,
-                rating = :rating,
-                thumbnail = :thumbnail
+                " . ($data["thumbnail"]) ? "thumbnail = :thumbnail" : "" . ",
+                " . ($data["title"]) ? "title = :title" : "" . ",
+                " . ($data["description"]) ? "description = :description" : "" . ",
+                " . ($data["main_actor"]) ? "main_actor = :main_actor" : "" . ",
+                " . ($data["duration"]) ? "duration = :duration" : "" . ",
+                " . ($data["rating"]) ? "rating = :rating" : "" . "
             WHERE
                 id = :id
         ";
+        Debug::parseAndDie($sql);
         $stmt = $this->conn->prepare($sql);
         $stmt->bindValue(":id", $data["id"], PDO::PARAM_INT);
         $stmt->bindValue(":title", $data["title"], PDO::PARAM_STR);

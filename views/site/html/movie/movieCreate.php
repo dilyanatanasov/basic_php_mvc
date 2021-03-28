@@ -2,7 +2,7 @@
 
 echo "<section class='content'>
         <section class='create'>
-            <form action='" . APPLICATION_PATH . "index.php?controller=movies&action=create' method='post'>
+            <form action='" . APPLICATION_PATH . "index.php?controller=movies&action=create' method='post' enctype='multipart/form-data'>
                 <label>Title</label>
                 <input type='text' name='title' placeholder='Title'><br>
                 <label for='description'>Description</label>
@@ -14,7 +14,7 @@ echo "<section class='content'>
                 <label>Rating</label>
                 <input type='text' name='rating' placeholder='Rating'><br>
                 <label>Thumbnail</label>
-                <input type='text' name='thumbnail' placeholder='Thumbnail'><br>
+                <input type='file' name='fileToUpload'><br>
                 <input type='submit' name='create' value='Create'>
             </form>
         </section>

@@ -2,7 +2,7 @@
 
 echo "<section class='content'>
         <section class='update'>
-            <form action='". APPLICATION_PATH ."index.php?controller=movies&action=update&movie_id=$data->id' method='post'>
+            <form action='". APPLICATION_PATH ."index.php?controller=movies&action=update&movie_id=$data->id' method='post' enctype='multipart/form-data'>
                 <input style='display: none' type='number' name='id' hidden='true' value='$data->id'><br>
                 <label>Title</label>
                 <input type='text' name='title' placeholder='Title' value='$data->title'><br>
@@ -15,7 +15,7 @@ echo "<section class='content'>
                 <label>Rating</label>
                 <input type='text' name='rating' placeholder='Rating' value='$data->rating'><br>
                 <label>Thumbnail</label>
-                <input type='text' name='thumbnail' placeholder='Thumbnail' value='$data->thumbnail'><br>
+                <input type='file' name='fileToUpload'><br>
                 <input type='submit' name='update' value='Update'>
             </form>
         </section>

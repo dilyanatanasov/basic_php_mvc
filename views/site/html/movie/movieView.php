@@ -6,7 +6,7 @@ echo "<section class='content'>
             <header>
                 <p>$data->title</p>
             </header>
-            <h3><img src='$data->thumbnail'></h3>
+            <h3><img src='" . APPLICATION_PATH . IMG_PATH . "$data->thumbnail'></h3>
             <h3 class='rating'>";
 display_rating($data->rating);
 echo "</h3>
