@@ -1,4 +1,4 @@
-async function postData(url = 'http://localhost/project-example/api/api.php', data = {}) {
+async function postData(url = 'http://localhost/mvc/api/Api.php', data = {}) {
     // Default options are marked with *
     const response = await fetch(url, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.

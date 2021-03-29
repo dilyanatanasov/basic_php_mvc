@@ -42,6 +42,10 @@ class Authentication
         }
     }
 
+    public function validToken($token) {
+        return $token === "123test";
+    }
+
     public static function signUp() {
         if (!empty($_POST) && !empty($_POST["sign_up"])) {
             $userModel = new UserModel();

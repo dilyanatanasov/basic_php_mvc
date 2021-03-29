@@ -23,3 +23,15 @@ echo "</h3>
             </h3>
         </section>
     </section>";
+
+
+echo "
+<script type='application/javascript'>
+const button = document.getElementById('addComment');
+button.onclick = () => {
+    let message = document.getElementById('message').value;
+    console.log(message);
+    document.getElementById('message').value = '';
+};
+</script>
+";

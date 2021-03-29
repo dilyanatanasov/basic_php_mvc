@@ -1,6 +1,5 @@
 <?php
 require_once dirname(dirname(__FILE__)). "/core/Authentication.php";
-require_once dirname(dirname(__FILE__)). "/models/MoviesModel.php";
 
 $_POST = json_decode(file_get_contents('php://input'), true);
 
@@ -31,7 +30,6 @@ class Api {
     }
 
     private function request($action, $data) {
-        $response;
         switch($action) {
             case "delete":
                 $id = $data;
@@ -39,7 +37,7 @@ class Api {
                 $movieInstance = $movie->view($id);
                 $movieInstance->delete();
                 $response = json_encode([
-                    "message" => "Successfully deleted"
+                    "message" => "Successfully added comment"
                 ]);
                 break;
             default:

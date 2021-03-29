@@ -9,7 +9,7 @@ showMessage = (message) => {
     snackbar.style.display = "block";
     snackbar.style.padding = "10px";
     setTimeout(() => {
-        window.location.href = "http://localhost/project-example/movie.php";
+        window.location.href = "http://localhost/mvc/movie.php";
     }, 2000)
 }
 
@@ -18,12 +18,12 @@ if (
     action !== undefined &&
     data !== undefined
 ) {
-    postData("http://localhost/project-example/api/api.php", {
+    postData("http://localhost/mvc/api/Api.php", {
         token: token,
         action: action,
         data: data
     }).then((data) => {
-        if (data.message !== undefined && data.message === "Successfully deleted") {
+        if (data.message !== undefined && data.message === "Successfully added comment") {
             showMessage(data.message);
         } else {
             console.log("Unauthorized");
