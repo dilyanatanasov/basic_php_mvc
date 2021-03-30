@@ -28,6 +28,20 @@ class MoviesRepository extends Db
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
+    public function getAllCommentsForMovie($movie_id)
+    {
+        $sql = "
+            SELECT UC.username, C.comment, C.created_at FROM imdb.movies M
+            INNER JOIN imdb.comments C ON C.movie_id = M.id
+            INNER JOIN imdb.user_credentials UC ON UC.id = C.user_id 
+            WHERE M.id = :id
+        ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindValue(":id", $movie_id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
     public function getByTitleOrDescription($topic)
     {
         $sql = "
@@ -64,7 +78,7 @@ class MoviesRepository extends Db
                 title = :title,
                 description = :description,
                 main_actor = :main_actor,
-                " . $thumbnail ."
+                " . $thumbnail . "
                 duration = :duration,
                 rating = :rating
             WHERE
@@ -89,6 +103,19 @@ class MoviesRepository extends Db
         ";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindValue(":id", $id, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
+    public function addComment($movie_id, $user_id, $comment)
+    {
+        $sql = "
+            INSERT INTO imdb.comments(id, movie_id, user_id, comment)
+            VALUES(NULL, :movie_id, :user_id, :comment)
+        ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindValue(":movie_id", $movie_id, PDO::PARAM_INT);
+        $stmt->bindValue(":user_id", $user_id, PDO::PARAM_INT);
+        $stmt->bindValue(":comment", $comment, PDO::PARAM_STR);
         return $stmt->execute();
     }
 }

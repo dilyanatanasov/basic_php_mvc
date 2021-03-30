@@ -17,7 +17,7 @@ class MoviesController extends BaseController
         if (!empty($_POST["create"])) {
             $fileName = $this->uploadManager->uploadImg();
             if (!$fileName) {
-                echo "Error on upload";
+                return false;
             }
             $_POST["thumbnail"] = $fileName;
 
@@ -32,7 +32,12 @@ class MoviesController extends BaseController
     public function view()
     {
         if (!empty($_GET["movie_id"])) {
-            return $this->moviesModel->view($_GET["movie_id"]);
+            $movieData = $this->moviesModel->view($_GET["movie_id"]);
+            $comments = $this->moviesModel->listAllComments($_GET["movie_id"]);
+            return [
+                "movieData" => $movieData,
+                "comments" => $comments
+            ];
         }
         return false;
     }
