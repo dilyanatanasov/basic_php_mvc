@@ -1,12 +1,11 @@
 <?php
-
 echo "<section class='content'>
         <section class='view'>
             <section class='heading'>
             <header>
                 <p>" . $data["movieData"]->title . "</p>
             </header>
-            <h3><img src='" . APPLICATION_PATH . IMG_PATH . $data["movieData"]->thumbnail. "'></h3>
+            <h3><img src='" . APPLICATION_PATH . IMG_PATH . $data["movieData"]->thumbnail . "'></h3>
             <h3 class='rating'>";
 display_rating($data["movieData"]->rating);
 echo "</h3>
@@ -20,9 +19,9 @@ echo "</h3>
               Comments:
                 <input id='message' type='text' placeholder='I like the movie...'>
                 <button id='addComment' type='submit'>Comment</button>";
-                foreach ($data["comments"] as $comment) {
-                    echo "<p>" .$comment->username . ": " . $comment->comment . " " . $comment->created_at . "</p>";
-                }
+foreach ($data["comments"] as $comment) {
+    echo "<p>" . $comment->username . ": " . $comment->comment . " " . $comment->created_at . "</p>";
+}
 
 echo "        </h3>
         </section>
@@ -52,9 +51,11 @@ button.onclick = async () => {
         token: '123abc',
         action: 'comment',
         data: {
-            user_id: " . $_SESSION['uid'] . ",
-            comment: message,
-            movie_id: " .$data["movieData"]->id. "
+            user_id: ";
+if (!empty($_SESSION["uid"])) echo $_SESSION["uid"];
+echo ",
+           comment: message,
+            movie_id: " . $data["movieData"]->id . "
         }
     })
     document.getElementById('message').value = '';

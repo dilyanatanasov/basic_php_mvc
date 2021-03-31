@@ -78,7 +78,7 @@ html body main .content .split-content .movies .movie {
   display: flex;
   flex-direction: column;
   width: 30%;
-  height: 300px;
+  height: 400px;
   margin-bottom: 70px;
 }
 html body main .content .split-content .movies .movie .view {
@@ -113,7 +113,7 @@ html body main .content .create form label {
   margin: 5px 0;
 }
 html body main .content .create form label[for=description] {
-  padding: 15px 5px;
+  padding: 20px 5px;
 }
 html body main .content .create form input, html body main .content .create form textarea {
   float: right;
@@ -134,7 +134,7 @@ html body main .content .create form input[type=submit] {
   background-color: #1fa580;
   transition: background-color 500ms ease;
   color: white;
-  margin-bottom: 160px;
+  margin-bottom: 250px;
 }
 html body main .content .create form input[type=submit]:hover {
   background-color: #144e48;
@@ -148,7 +148,7 @@ html body main .content .update form label {
   margin: 5px 0;
 }
 html body main .content .update form label[for=description] {
-  padding: 15px 5px;
+  padding: 20px 5px;
 }
 html body main .content .update form input, html body main .content .update form textarea {
   float: right;
@@ -176,7 +176,7 @@ html body main .content .update form input[type=submit] {
   background-color: #f4c239;
   transition: background-color 500ms ease;
   color: white;
-  margin-bottom: 160px;
+  margin-bottom: 230px;
 }
 html body main .content .update form input[type=submit]:hover {
   background-color: #c19622;
@@ -204,7 +204,7 @@ html body main .content .view .heading h3 {
 html body main .content .view .heading h3 img {
   border-radius: 5px;
   width: 100%;
-  height: 350px;
+  height: 480px;
 }
 html body main .content .view .heading .rating {
   margin: 5px 0;
