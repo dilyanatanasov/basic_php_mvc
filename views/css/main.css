@@ -78,8 +78,8 @@ html body main .content .split-content .movies .movie {
   display: flex;
   flex-direction: column;
   width: 30%;
-  height: 400px;
-  margin-bottom: 70px;
+  height: 500px;
+  margin-bottom: 100px;
 }
 html body main .content .split-content .movies .movie .view {
   height: 100%;
@@ -113,7 +113,7 @@ html body main .content .create form label {
   margin: 5px 0;
 }
 html body main .content .create form label[for=description] {
-  padding: 20px 5px;
+  padding: 25px 5px;
 }
 html body main .content .create form input, html body main .content .create form textarea {
   float: right;
@@ -148,7 +148,7 @@ html body main .content .update form label {
   margin: 5px 0;
 }
 html body main .content .update form label[for=description] {
-  padding: 20px 5px;
+  padding: 25px 5px;
 }
 html body main .content .update form input, html body main .content .update form textarea {
   float: right;
