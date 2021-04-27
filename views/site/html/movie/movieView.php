@@ -18,12 +18,14 @@ echo "</h3>
             <h3>
               Comments:
                 <input id='message' type='text' placeholder='I like the movie...'>
-                <button id='addComment' type='submit'>Comment</button>";
+                <button id='addComment' type='submit'>Comment</button>
+                <div id='comments'>";
 foreach ($data["comments"] as $comment) {
     echo "<p>" . $comment->username . ": " . $comment->comment . " " . $comment->created_at . "</p>";
 }
 
-echo "        </h3>
+echo "    </div>      
+        </h3>
         </section>
     </section>";
 
@@ -58,6 +60,16 @@ echo ",
             movie_id: " . $data["movieData"]->id . "
         }
     })
+    
+    const date = new Date();
+    let month = (date.getMonth() + 1 < 10) ? '0' + (date.getMonth() + 1)  : (date.getMonth() + 1);
+    let full_date = date.getFullYear() + '-' + month + '-' + date.getDate();
+    let element = document.createElement('p');
+    let text_for_comment = '" . $_SESSION['username'] . "' + ': ' + message + ' ' + full_date;
+    let content = document.createTextNode(text_for_comment);
+    element.appendChild(content);
+    document.getElementById('comments').appendChild(element);
+    
     document.getElementById('message').value = '';
 };
 </script>
