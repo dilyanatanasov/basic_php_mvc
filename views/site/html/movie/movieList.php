@@ -19,7 +19,7 @@ echo "
                     <span>";
                     display_rating($movie->rating);
                     echo "</span>
-                    <a class='delete' href='" . APPLICATION_PATH . "index.php?controller=movies&action=delete&movie_id=$movie->id'>Delete</a>
+                    <a class='delete' href='index.php?controller=movies&action=delete&movie_id=$movie->id'>Delete</a>
                 </div>";
             }
 echo "        </section>

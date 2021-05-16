@@ -12,9 +12,6 @@ if (isset($data) && !empty($data)) {
         case "create":
             require_once "html/movie/movieCreate.php";
             break;
-        case "update":
-            require_once "html/movie/movieUpdate.php";
-            break;
         case "delete":
             require_once "html/movie/movieDelete.php";
             break;

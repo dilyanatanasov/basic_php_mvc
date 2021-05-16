@@ -44,7 +44,7 @@ class Authentication
     }
 
     public function validToken($token) {
-        return $token === "123abc";
+        return $token === "abc123";
     }
 
     public static function signUp() {

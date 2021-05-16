@@ -56,13 +56,6 @@ class MoviesRepository extends Db
 
     public function getById($id)
     {
-        $sql = "
-            SELECT * FROM imdb.movies WHERE id = :id
-        ";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bindValue(":id", $id, PDO::PARAM_INT);
-        $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_OBJ);
     }
 
     public function update($data)

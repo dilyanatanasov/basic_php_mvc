@@ -18,10 +18,6 @@ class UserModel extends BaseModel
         return $this->userRepository->getById($id);
     }
 
-    public function viewByUsernameAndPassword($username, $password) {
-        return $this->userRepository->getByUsernameAndPassword($username, $password);
-    }
-
     public function listAll()
     {
         return $this->userRepository->getAll();

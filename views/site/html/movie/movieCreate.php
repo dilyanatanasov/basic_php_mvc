@@ -10,7 +10,7 @@ echo "<section class='content'>
                 <label>Main Actor</label>
                 <input type='text' name='main_actor' placeholder='Main Actor'><br>
                 <label>Duration</label>
-                <input type='text' name='duration' placeholder='Duration'><br>
+                <input type='text' name='main_actor' placeholder='Duration'><br>
                 <label>Rating</label>
                 <input type='text' name='rating' placeholder='Rating'><br>
                 <label>Thumbnail</label>
