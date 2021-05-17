@@ -1,5 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__)). "/core/Authentication.php";
+require_once dirname(dirname(__FILE__)). "/helpers/Debug.php";
 require_once dirname(dirname(__FILE__)). "/core/Db.php";
 require_once dirname(dirname(__FILE__)). "/models/BaseModel.php";
 require_once dirname(dirname(__FILE__)). "/models/MoviesModel.php";

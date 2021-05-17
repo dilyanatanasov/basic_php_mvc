@@ -9,6 +9,8 @@ class Autoload
         require_once "core/Pager.php";
         require_once "core/Router.php";
         require_once "core/Db.php";
+        require_once "core/UploadManager.php";
+        require_once "helpers/Debug.php";
         require_once "helpers/RatingHelper.php";
         require_once "helpers/AccessHelper.php";
 

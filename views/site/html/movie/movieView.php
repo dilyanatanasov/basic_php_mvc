@@ -49,8 +49,8 @@ async function postData(url = 'http://localhost/mvc/api/Api.php', data = {}) {
 const button = document.getElementById('addComment');
 button.onclick = async () => {
     let message = document.getElementById('message').value;
-    await postData('http://localhost/mvc/api/Apii.php', {
-        token: '123abc',
+    await postData('http://localhost/mvc/api/Api.php', {
+        token: 'abc123',
         action: 'comment',
         data: {
             user_id: ";

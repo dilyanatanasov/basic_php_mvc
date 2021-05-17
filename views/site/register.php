@@ -17,7 +17,7 @@
     <input name="first_name" placeholder="First Name" autocomplete="off">
     <input name="last_name" placeholder="Last Name" autocomplete="off">
     <input type="password" name="password" placeholder="Password" autocomplete="off">
-    <input type="submit" value="Sign Up"/>
+    <input type="submit" name="sign_up" value="Sign Up"/>
     <a href="<?php echo APPLICATION_PATH ?>index.php?login=true">Alredy have a registration?</a>
 </form>
 </body>

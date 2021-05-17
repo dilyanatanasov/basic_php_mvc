@@ -48,6 +48,7 @@ class Authentication
     }
 
     public static function signUp() {
+
         if (!empty($_POST) && !empty($_POST["sign_up"])) {
             $userModel = new UserModel();
             $_POST["password"] = hash("sha256", $_POST["password"]);
